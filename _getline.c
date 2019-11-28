@@ -67,7 +67,7 @@ ssize_t _readchar(char **buffer, size_t *buff_size)
 	size_t count, iterations;
 
 	count = 0;
-	iterations = 1;
+	iterations = 2048;
 	j = 0;
 
 	while (1)
@@ -83,7 +83,7 @@ ssize_t _readchar(char **buffer, size_t *buff_size)
 			break;
 		}
 		if (count++ % *buff_size == 0)
-			*buffer = _realloc(*buffer, count, (*buff_size * ++iterations));
+			*buffer = _realloc(*buffer, count, (iterations));
 	}
 
 	return ((ssize_t)count);
