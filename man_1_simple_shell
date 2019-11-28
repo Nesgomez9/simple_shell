@@ -1,0 +1,49 @@
+.Dd 28/11/2019               \" DATE
+.Dt My_shell 1     \" Program name and manual section number
+.Sh NAME                 \" Section Header - required - don't modify
+.Nm Simple shell
+.\" The following lines are read in generating the apropos(man -k) database. Use only key
+.\" words here as the database is built based on the words here and in the .ND line.
+.Nm UNIX command interpreter().
+.Sh SYNOPSIS             \" Section Header - required - don't modify
+.Nm
+.Op options              \" [-abcd]
+.Op string || file         \" [-a path]
+.Sh DESCRIPTION          \" Section Header - required - don't modify
+.Nm
+works like a -sh interpreter that read lines from standar input or a file.
+.Sh OVERVIEW
+.Nm
+This shell split the enter from the user in tokens, the first token
+.Nm 
+is a argument, and after compare whit a list of built-in programs and after check the $PATH and execute this command if can be found
+.Nm
+the other tokens are treated as options.
+.Sh Built-ins
+.It
+Cd changes current directory
+.It
+exit exit from the shell when you type it
+.It
+env Print the current envirnment
+.Sh PARAMETERS
+.It 
+ENV
+.It 
+PWD
+.El                      \" Ends the list
+.\" .Sh DIAGNOSTICS       \" May not be needed
+.\" .Bl -diag
+.\" .It Diagnostic Tag
+.\" Diagnostic informtion here.
+.\" .It Diagnostic Tag
+.\" Diagnostic informtion here.
+.\" .El
+.Sh SEE ALSO
+.\" List links in ascending order by section, alphabetically within a section.
+.\" Please do not reference files that do not exist without filing a bug report
+.Xr sh 1 ,
+.\" .Sh BUGS              \" Document known, unremedied bugs
+.\" .Sh HISTORY           \" Document history if command behaves in a unique manner
+.Sh AUTHORS
+Nicolas Esteban Gomez Tellez and Nicolas Sanchez Parra
